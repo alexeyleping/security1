@@ -19,6 +19,16 @@ public class UserApp {
     @Column(name = "password")
     String password;
 
+
+    public UserApp() {
+    }
+
+    public UserApp(Long id, String name, String password) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+    }
+
     public Long getId() {
         return id;
     }
