@@ -9,11 +9,11 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @EnableWebSecurity
 @Configuration
-public class AppCinfig {
+public class AppConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.httpBasic();
+        http.authorizeHttpRequests().anyRequest().authenticated().and().httpBasic();
         return http.build();
     }
 
