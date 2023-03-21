@@ -1,14 +1,13 @@
-package com.example.security1.controller;
+package com.example.security.controller;
 
-
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class AppController {
 
     @GetMapping("/hello")
-    public String helloApp(){
+    public String hello() {
         return "hello!!!";
     }
 }
